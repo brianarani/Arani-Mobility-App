@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #c11818;
+  --dark: #282828;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: #ffffff;
+}
+
+.btn-primary {
+  @apply bg-[#c11818] text-white font-medium px-6 py-3 hover:bg-[#a31414] transition-all duration-300 text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5 rounded;
+}
+
+.btn-secondary {
+  @apply bg-[#282828] text-white font-medium px-6 py-3 hover:bg-[#383838] transition-all duration-300 text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5 rounded;
+}
+
+.divider {
+  @apply flex items-center text-[#282828] font-medium my-4;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  @apply flex-1 h-[1px] bg-gray-200;
+}
+
+.divider span {
+  @apply px-6 text-sm;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
